@@ -1,13 +1,21 @@
-human_turn = 'rock'
-computer_turn = 'scissors'
+import random
+turns = ['rock', 'paper', 'scissors']
 
-if human_turn == computer_turn:
+
+human_turn = input ('Input human turn: ')
+computer_turn = random.choice(turns)
+if computer_turn == human_turn: 
     print('Draw!')
-elif human_turn == 'rock' and computer_turn == 'scissors':
-    print('Human wins!')
+if human_turn == 'rock' and computer_turn == 'scissors':
+    print('human wins!')
 elif human_turn == 'paper' and computer_turn == 'rock':
-    print('Human wins!')
+    print('human wins!')    
 elif human_turn == 'scissors' and computer_turn == 'paper':
-    print('Human wins!')
-else:
-    print('Computer wins!')
+    print('human wins!')
+else: print('Computer wins!')
+
+restart = input("Would you like to play again? ")
+if restart == "yes" or restart == "y":
+    script()
+if restart == "n" or restart == "no":
+    print("Good bye!")
